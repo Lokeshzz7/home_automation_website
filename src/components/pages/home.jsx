@@ -95,6 +95,7 @@ const Home = () => {
         </div>
       </section>
       {/* How it works / About section */}
+{/* How it works / About section */}
 <section className="py-20 px-6 bg-black">
   <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
     
@@ -148,22 +149,51 @@ const Home = () => {
 
 
       {/* CTA section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-blue-700 to-blue-500">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-white drop-shadow-lg">Ready to Upgrade Your Home?</h2>
-          <p className="text-lg text-white mb-6">
-            Let’s bring smart living to your doorstep. Contact us today and get started.
-          </p>
-          <a
-            href="https://wa.me/9940672091"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-xl transition-all"
-          >
-            Chat on WhatsApp
-          </a>
-        </div>
-      </section>
+      {/* Upgraded CTA section */}
+{/* Enhanced CTA Section */}
+<section className="relative overflow-hidden py-28 px-6 bg-[#0f172a]">
+  {/* Animated glowing blobs */}
+  <div className="absolute w-[30rem] h-[30rem] bg-blue-500 rounded-full blur-3xl opacity-30 top-0 -left-20 animate-pulse" />
+  <div className="absolute w-[20rem] h-[20rem] bg-purple-600 rounded-full blur-2xl opacity-25 bottom-0 -right-10 animate-ping" />
+
+  {/* Frosted Glass Container */}
+  <motion.div
+    className="relative max-w-3xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-10 text-center shadow-xl"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+  >
+    <motion.h2
+      className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight drop-shadow-md"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    >
+      Ready to Upgrade Your Home?
+    </motion.h2>
+    <motion.p
+      className="text-lg md:text-xl text-gray-300 mb-8"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.4 }}
+    >
+      Let’s bring smart living to your doorstep. Chat with us now to begin your smart journey.
+    </motion.p>
+
+    <motion.a
+      href="https://wa.me/9962524758"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      Chat on WhatsApp
+    </motion.a>
+  </motion.div>
+</section>
+
 
       {/* Footer */}
       <footer className="bg-black border-t border-gray-800 py-6 text-center text-gray-500 text-sm select-none">
